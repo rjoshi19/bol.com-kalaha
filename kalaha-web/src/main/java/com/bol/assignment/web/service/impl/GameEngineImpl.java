@@ -24,8 +24,8 @@ public class GameEngineImpl implements GameEngine {
     /**
      * This method calls all the rules one by one
      * Slight variation of Pipeline design pattern
-     * @param game
-     * @param pit
+     * @param game game current being played
+     * @param pit current pit being played
      */
     @Override
     public void play(Game game, Pit pit) {
