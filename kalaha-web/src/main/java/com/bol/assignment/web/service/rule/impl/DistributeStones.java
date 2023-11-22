@@ -65,9 +65,9 @@ public class DistributeStones implements GameRule {
     /**
      * If the last stone was placed in a House, continue with the same player
      * else switch players
-     * @param pit
-     * @param lastStonePlacedIn
-     * @return
+     * @param pit currentPit to identify next player
+     * @param lastStonePlacedIn last stone was placed in House or a Pit
+     * @return next player number
      */
     private int determineNextPlayer(Pit pit, PitType lastStonePlacedIn) {
         if (lastStonePlacedIn == HOUSE) {

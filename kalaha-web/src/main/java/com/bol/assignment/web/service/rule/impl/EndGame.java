@@ -1,9 +1,7 @@
 package com.bol.assignment.web.service.rule.impl;
 
 import com.bol.assignment.data.Game;
-import com.bol.assignment.data.House;
 import com.bol.assignment.data.Pit;
-import com.bol.assignment.data.Player;
 import com.bol.assignment.web.service.function.CheckedBiConsumer;
 import com.bol.assignment.web.service.rule.GameRule;
 import lombok.extern.slf4j.Slf4j;
