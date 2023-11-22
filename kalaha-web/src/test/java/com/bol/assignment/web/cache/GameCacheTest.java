@@ -6,12 +6,10 @@ import com.bol.assignment.web.exception.KalahaException;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.platform.commons.util.ReflectionUtils;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.lang.reflect.Field;
-import java.time.Instant;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,9 +38,7 @@ class GameCacheTest {
 
     @Test
     public void findByIdFailure() {
-        KalahaException kalahaException = assertThrows(KalahaException.class, () -> {
-            gameCache.findById("dummy-id");
-        });
+        KalahaException kalahaException = assertThrows(KalahaException.class, () -> gameCache.findById("dummy-id"));
 
         assertEquals("Game is not found for the id: dummy-id", kalahaException.getMessage());
     }

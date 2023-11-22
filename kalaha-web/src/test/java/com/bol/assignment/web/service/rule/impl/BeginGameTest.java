@@ -1,6 +1,5 @@
 package com.bol.assignment.web.service.rule.impl;
 
-import com.bol.assignment.data.Player;
 import com.bol.assignment.test.utils.TestUtils;
 import com.bol.assignment.web.exception.KalahaIllegalMoveException;
 import org.junit.jupiter.api.Test;
@@ -56,9 +55,8 @@ class BeginGameTest {
         //check player-2's turn
         final var pit2 = dummyBoard.getPit(11);
 
-        KalahaIllegalMoveException kalahaIllegalMoveException = assertThrows(KalahaIllegalMoveException.class, () -> {
-            beginGame.checkPlayerTurn.accept(dummyGame, pit2);
-        });
+        KalahaIllegalMoveException kalahaIllegalMoveException = assertThrows(KalahaIllegalMoveException.class,
+                () -> beginGame.checkPlayerTurn.accept(dummyGame, pit2));
 
         assertEquals(kalahaIllegalMoveException.getMessage(), "Its not your turn, let the other player play. It is player-1's turn.");
     }
@@ -71,9 +69,8 @@ class BeginGameTest {
         final var pit = dummyBoard.getPit(1);
         pit.setStones(0);
 
-        KalahaIllegalMoveException kalahaIllegalMoveException = assertThrows(KalahaIllegalMoveException.class, () -> {
-            beginGame.checkEmptyStartingPit.accept(dummyGame, pit);
-        });
+        KalahaIllegalMoveException kalahaIllegalMoveException = assertThrows(KalahaIllegalMoveException.class,
+                () -> beginGame.checkEmptyStartingPit.accept(dummyGame, pit));
 
         assertEquals(kalahaIllegalMoveException.getMessage(), "Can not start from empty pit");
     }

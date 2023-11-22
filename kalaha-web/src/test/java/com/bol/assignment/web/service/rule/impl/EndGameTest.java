@@ -1,7 +1,6 @@
 package com.bol.assignment.web.service.rule.impl;
 
 import com.bol.assignment.data.Pit;
-import com.bol.assignment.data.Player;
 import com.bol.assignment.test.utils.TestUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +12,7 @@ import java.util.Map;
 
 import static com.bol.assignment.data.Player.PLAYER1;
 import static com.bol.assignment.data.Player.PLAYER2;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith({MockitoExtension.class})
 class EndGameTest {
