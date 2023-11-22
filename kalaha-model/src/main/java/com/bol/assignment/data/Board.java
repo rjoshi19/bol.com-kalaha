@@ -94,7 +94,7 @@ public class Board {
     }
 
     /**
-     * @param playerNumber
+     * @param playerNumber the player for with total stones are to be fetched
      * @return total stones in the pit for player with @{link playerNumber}
      */
     public int getStonesInPitsForPlayer(int playerNumber) {
